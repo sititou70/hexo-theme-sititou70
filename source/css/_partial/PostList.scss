@@ -1,0 +1,78 @@
+$more_button_height: 50px;
+.post_list_wrapper{
+  .post_list{
+    padding-left: 0;
+    margin: 20px 0 0;
+    list-style: none;
+    font-size: 0.9rem;
+    overflow: hidden;
+
+    > li{
+      margin-top: $grid / 2;
+
+      ul{
+        padding-left: $grid;
+        list-style: none;
+
+        li{
+          position: relative;
+          margin-top: $grid / 4;
+          &:before{
+            content: "\f1db";
+            position: absolute;
+            top: 0.5rem;
+            left: -1rem;
+            margin-right: $grid / 4;
+            color: lighten($main_darken_text, 50%);
+            font-family: FontAwesome;
+            font-size: 0.5rem;
+            @include sp(){
+              left: -1rem;
+              font-size: 0.8rem;
+            }
+          }
+
+          a{
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+
+  .is-post-list-close{
+    height: 300px;
+    margin-bottom: -$more_button_height;
+  }
+
+  .post_list_more_button{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    height: $more_button_height;
+    padding: $grid / 2 0;
+    font-size: 2rem;
+    text-align: center;
+    text-decoration: none;
+    overflow: visible;
+    cursor: pointer;
+    z-index: 0;
+    &:after{
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      display: inline-block;
+      width: 100%;
+      height: 100px;
+      background: linear-gradient(0deg, $main_lighten_bg 0%, $transparent 100%);
+      pointer-events: none;
+      z-index: -1;
+    }
+    &:hover{
+      background: rgba(darken($main_lighten_bg, 30%), 0.3);
+    }
+  }
+}

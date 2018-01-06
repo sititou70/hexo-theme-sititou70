@@ -1,0 +1,13 @@
+@import "./AuthorIntroduction.scss";
+@import "./PostList.scss";
+@import "./SiteSearch.scss";
+@import "./TwitterWidget.scss";
+
+aside{
+  width: 30%;
+  padding: 0 $grid * 2 0 $grid;
+  @include sp(){
+    width: 100%;
+    padding: 0 $grid;
+  }
+}

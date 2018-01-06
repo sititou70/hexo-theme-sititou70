@@ -1,0 +1,40 @@
+$grid: 20px;
+$key_color: #09446d;
+$middle_media: "only screen and (max-width:768px)";
+
+$main_darken_text: #222;
+$main_lighten_text: #eee;
+$main_key_text: lighten($key_color, 15%);
+
+$main_lighten_bg: #fcfcfc;
+$main_lighten_bg_active: darken($main_lighten_bg, 5%);
+$main_darken_bg: #222;
+$main_darken_bg_active: lighten($main_darken_bg, 5%);
+
+$main_shadow_color: #072AB8;
+$main_text_shadow: 0 0 30px rgba($main_shadow_color, 0.9);
+$main_box_shadow: 0 0 30px rgba($main_shadow_color, 0.3);
+
+$main_border_radius: 2px;
+$main_transition: all 0.3s ease;
+$main_max_width: 1100px;
+
+$sp_breakpoint: 768px;
+@mixin sp() {
+  @media screen and (max-width: $sp_breakpoint) {
+    @content;
+  }
+}
+
+@mixin main_font($font_weight: 300) {
+  font-family: "mplus-1p", "Yu Gothic", "游ゴシック", "游ゴシック体", "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", "メイリオ" , Meiryo, sans-serif;
+  font-weight: $font_weight;
+}
+
+@mixin propgramming_font($font_weight: 300) {
+  font-family: "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+  font-weight: $font_weight;
+}
+
+$transparent: rgba(255, 255, 255, 0);
+

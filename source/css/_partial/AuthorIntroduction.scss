@@ -1,0 +1,50 @@
+.author_introduction{
+  margin-top: $grid * 2;
+
+  &__main_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img{
+      display: block;
+      width: 30%;
+      max-width: 100px;
+      margin: 0 $grid 0 0;
+      border-radius: 50%;
+    }
+
+    div{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 0;
+
+      h2{
+        margin: 0;
+        font-size: 1rem;
+        font-weight: 400;
+        border: none;
+      }
+
+      p{
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  &__links{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    a{
+      font-size: 1.5rem;
+      text-decoration: none;
+      @extend .button;
+      @include sp(){
+        font-size: 2rem;
+      }
+    }
+  }
+}

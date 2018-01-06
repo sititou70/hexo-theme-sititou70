@@ -1,0 +1,11 @@
+footer{
+  max-width: $main_max_width;
+  margin: 0 auto;
+  padding: $grid;
+  color: $main_lighten_text;
+  text-align: center;
+  font-size: 0.9rem;
+  background: $key_color;
+  box-shadow: $main_box_shadow;
+}
+

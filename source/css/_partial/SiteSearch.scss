@@ -1,0 +1,19 @@
+.site_search{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: $grid * 2;
+
+  input{
+    width: 100%;
+    margin-left: $grid / 2;
+    padding: $grid / 2 $grid / 4;
+    border: solid lighten($main_darken_text, 70%);
+    border-width: 0 0 2px 0;
+    background: none;
+    &:focus{
+      border: solid $main_key_text;
+      border-width: 0 0 2px 0;
+    }
+  }
+}

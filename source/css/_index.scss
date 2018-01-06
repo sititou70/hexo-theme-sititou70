@@ -1,0 +1,57 @@
+@import './_partial/PostCard.scss';
+
+.index{
+  .post_cards{
+    margin-top: $grid * 2;
+  }
+
+  .page_nav{
+    display: flex;
+    justify-content: center;
+    margin-top: $grid * 2;
+    text-align: center;
+
+    .page-number,
+    .space,
+    .extend{
+      @extend .button;
+    }
+
+    .page-number,
+    .space{
+      @include sp(){
+        display: none;
+      }
+    }
+
+    .prev{
+      @include sp(){
+        margin-right: auto;
+      }
+    }
+
+    .next{
+      @include sp(){
+        margin-left: auto;
+      }
+    }
+
+    .current,
+    .space{
+      color: $main_darken_text;
+      background: none;
+      font-weight: 300;
+      cursor: auto;
+      &:hover{
+        color: $main_darken_text;
+        background: none;
+      }
+      @include sp(){
+        display: inline;
+        position: absolute;
+      }
+    }
+  }
+}
+
+
