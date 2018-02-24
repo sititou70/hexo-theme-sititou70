@@ -60,6 +60,16 @@ h6 + p{
   margin-top: 0;
 }
 
+em{
+  font-weight: 400;
+  font-style: italic;
+}
+
+b,
+strong{
+  font-weight: 700;
+}
+
 button,
 .button{
   margin: $grid / 2;
@@ -107,7 +117,8 @@ table{
 
   thead{
     tr{
-      border-bottom: solid 2px lighten($main_darken_text, 50%);
+      font-weight: 700;
+      border-bottom: solid 2px lighten($main_darken_text, 70%);
     }
   }
   
@@ -126,9 +137,10 @@ blockquote{
 
 code{
   display: inline-block;
-  margin: 0 $grid / 2;
-  padding: 0 $grid / 2;
+  margin: 0 $grid / 4;
+  padding: 0 $grid / 4;
   background: $main_lighten_bg_active;
+  border-radius: $main_border_radius;
 }
 
 .highlight{
