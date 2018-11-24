@@ -20,3 +20,4 @@ export default ({page, theme, paginator}) => {
     </div>
   );
 }
+

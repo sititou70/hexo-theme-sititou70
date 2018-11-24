@@ -4,10 +4,12 @@ twitter_id: sititou70
 github_id: sititou70
 facebook_id: 100010978380334
 
-# UI
-postcard_intro_length: 140
+#ui
+latest_articles_num: 3
 
 # other
 google_analytics_id: UA-93342312-1
 google_analytics_developer_key: sititou70.github.io_developer
 twitter_widget_id: '481402935021035520'
+theme_path: './themes/sititou70/'
+

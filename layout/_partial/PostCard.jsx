@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default ({document, theme}) => {
+export default ({document, theme, simple}) => {
   const content_image_tag = (/<img.*?src=".+?".*?>/).exec(document.content);
   const image_attrs = content_image_tag !== null
   ? {
@@ -14,14 +14,15 @@ export default ({document, theme}) => {
         alt={image_attrs.alt[1]} />
     : null;
   const title = document.title;
-  const intro = document.content.replace(/<.*?>/g, ' ').slice(0, theme.postcard_intro_length - 1) + '…';
 
   return (
-    <a className="post_card" href={document.path}>
-      {image}
-      <h2>{title}</h2>
-      <span>{document.date.format('YYYY/MM/DD')}</span>
-      <p>{intro}</p>
+    <a
+      className={`post_card ${simple ? "is-simple" : ""}`}
+      href={document.path}
+    >
+      { image }
+      <span>{ document.date.format('YYYY/MM/DD') }</span>
+      <h2>{ title }</h2>
     </a>
   );
 }

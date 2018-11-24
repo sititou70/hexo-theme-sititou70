@@ -46,6 +46,9 @@
         color: $main_darken_text;
         background: none;
       }
+    }
+
+    .current{
       @include sp(){
         display: inline;
         position: absolute;

@@ -4,7 +4,7 @@ export default ({config, theme}) => {
   return (
     <div className="author_introduction">
       <div className="author_introduction__main_container">
-        <img src="/css/images/auther.jpg" />
+        <img src="/images/auther.jpg" />
         <div>
           <h2>{config.author}</h2>
           <p>{theme.author_introduction}</p>

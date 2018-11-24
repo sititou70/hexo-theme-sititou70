@@ -1,12 +1,12 @@
 import React from 'react';
-import PostNav from './_partial/PostNav.jsx';
+import LatestArticles from './_partial/LatestArticles.jsx';
 import Disqus from './_partial/Disqus.jsx';
 
-export default ({page, theme, paginator}) => {
+export default ({page, site, theme, paginator}) => {
   return (
     <div className="post">
       <article dangerouslySetInnerHTML={{__html: page.content}} />
-      <PostNav page={page} />
+      <LatestArticles site={site} theme={theme} />
       <Disqus />
     </div>
   );

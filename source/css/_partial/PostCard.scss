@@ -15,40 +15,47 @@
 
   img{
     display: block;
-    width: 100%;
+    width: calc(100% + #{$grid} * 2);
+    max-width: none;
     height: auto;
     max-height: 30vh;
-    margin-top: $grid;
+    margin: 0 $grid * -1 $grid;
     object-fit: cover;
+    filter: brightness(90%);
   }
 
   h2{
-    margin: $grid 0 0 0;
+    margin: 0;
     border: none;
   }
 
-  span,
-  p{
-    margin: $grid / 2 0 0 0;
-    color: $main_darken_text;
-  }
-
   span{
+    display: block;
+    margin-top: $grid;
     font-size: 0.9rem;
   }
 
-  p{
-    position: relative;
-    overflow: hidden;
-    &:after{
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      height: 150%;
-      background: linear-gradient(0deg, $main_lighten_bg 0%, $transparent 100%);
-      pointer-events: none;
+  &.is-simple{
+    display: flex;
+    padding: 0;
+
+    img{
+      width: 40%;
+      max-height: none;
+      margin: 0;
+    }
+
+    h2{
+      display: flex;
+      align-items: center;
+      width: 60%;
+      margin: $grid;
+      font-size: 1.5rem;
+    }
+
+    span{
+      display: none;
     }
   }
 }
+

@@ -26,7 +26,7 @@ h5,
 h6{
   margin: $grid * 2 0 $grid / 4 0;
   padding: $grid / 4 0;
-  border-bottom: solid 1px lighten($main_darken_text, 70%);
+  border-bottom: $main_border;
   line-height: 1.25;
 }
 
@@ -132,7 +132,7 @@ table{
 blockquote{
   margin: 0 0 0 $grid;
   padding: 0 0 0 $grid;
-  border-left: solid 1px lighten($main_darken_text, 70%);
+  border-left: $main_border;
 }
 
 code{
