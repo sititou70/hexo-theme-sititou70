@@ -4,7 +4,7 @@
   margin: $grid auto;
   padding: 0 $grid $grid $grid;
   text-decoration: none;
-  box-shadow: 0 0 20px rgba($main_shadow_color, 0.1);
+  box-shadow: $main_paper_shadow;
   border-radius: $main_border_radius;
   &:first-child{
     margin-top: 0;

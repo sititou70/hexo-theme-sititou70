@@ -5,7 +5,7 @@ footer{
   color: $main_lighten_text;
   text-align: center;
   font-size: 0.9rem;
-  background: $key_color;
-  box-shadow: $main_box_shadow;
+  background: darken($key_color, 10%);
+  box-shadow: $main_paper_shadow;
 }
 
