@@ -16,8 +16,13 @@ export default ({site, theme}) => {
 
   return (
     <div className="latest_article">
-      <h2>最新の記事</h2>
+      <h2>最新記事</h2>
       { post_cards }
+      <a
+        href={`/#latest_post_${theme.latest_articles_num}`}
+      >
+        もっとみる
+      </a>
     </div>
   );
 }

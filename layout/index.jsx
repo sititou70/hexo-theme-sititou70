@@ -2,7 +2,14 @@ import React from 'react';
 import PostCard from './_partial/PostCard.jsx';
 
 export default ({page, theme, paginator}) => {
-  const post_cards = page.posts.data.map(x => <PostCard document={x} theme={theme} key={x.title} />);
+  const post_cards = page.posts.data.map((x, i) =>
+    <PostCard
+      document={x}
+      theme={theme}
+      id={`latest_post_${i}`}
+      key={x.title}
+    />
+  );
   
   return (
     <div className="index">

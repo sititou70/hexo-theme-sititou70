@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default ({document, theme, simple}) => {
+export default ({document, theme, id, simple}) => {
   const content_image_tag = (/<img.*?src=".+?".*?>/).exec(document.content);
   const image_attrs = content_image_tag !== null
   ? {
@@ -25,6 +25,7 @@ export default ({document, theme, simple}) => {
     <a
       className={`post_card ${simple ? "is-simple" : ""}`}
       href={document.path}
+      id={id}
     >
       { image }
       <span>{ document.date.format('YYYY/MM/DD') }</span>
