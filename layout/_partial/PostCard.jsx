@@ -9,9 +9,15 @@ export default ({document, theme, simple}) => {
     }
   : null;
   const image = content_image_tag != null
-    ? <img 
-        src={`${document.path}${image_attrs.src[1]}`}
-        alt={image_attrs.alt[1]} />
+    ?
+      <div
+        className="img_container"
+      >
+        <img 
+          src={`${document.path}${image_attrs.src[1]}`}
+          alt={image_attrs.alt[1]}
+        />
+      </div>
     : null;
   const title = document.title;
 
