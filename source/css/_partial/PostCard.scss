@@ -10,7 +10,7 @@
     margin-top: 0;
   }
   &:hover{
-    box-shadow: 0 0 20px rgba($main_shadow_color, 0.2);
+    background: darken($main_lighten_bg, 10%);
   }
 
   .img_container{
