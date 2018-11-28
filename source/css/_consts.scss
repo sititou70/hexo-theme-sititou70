@@ -1,5 +1,5 @@
 $grid: 20px;
-$key_color: #254b62;
+$key_color: #1d3E53;
 $middle_media: "only screen and (max-width:768px)";
 
 $main_darken_text: #222;
@@ -13,9 +13,9 @@ $main_darken_bg_active: lighten($main_darken_bg, 5%);
 
 $main_shadow_color: #000;
 $main_paper_drop_shadow: 0 2px 4px rgba($main_shadow_color, 0.1);
-$main_paper_ambient_shadow: 0 0 20px rgba($main_shadow_color, 0.2);
+$main_paper_ambient_shadow: 0 0 10px rgba($main_shadow_color, 0.1);
 $main_paper_shadow: $main_paper_drop_shadow, $main_paper_ambient_shadow;
-$main_box_shadow: $main_paper_shadow, 0 0 30px rgba($main_shadow_color, 0.1);
+$main_box_shadow: $main_paper_shadow, 0 0 30px rgba($main_shadow_color, 0.2);
 $main_text_shadow: 0 0 30px rgba($main_shadow_color, 0.9);
 
 $main_border: solid 1px lighten($main_darken_text, 70%);
