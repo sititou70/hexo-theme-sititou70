@@ -32,8 +32,9 @@
   }
 
   &__main{
-    margin: 0;
+    margin: 0.7rem 0;
     font-size: calc(2rem + 2vw);
+    line-height: 1.35;
     @include main_font(700);
   }
 
@@ -41,3 +42,4 @@
     font-size: calc(1.5rem);
   }
 }
+
