@@ -4,7 +4,7 @@
   flex-direction: column;
   width: 100%;
   max-width: $main_max_width;
-  height: 80vh;
+  min-height: 80vh;
   margin: 0 auto;
   padding: $grid * 2;
   color: $main_lighten_text;
