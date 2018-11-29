@@ -6,17 +6,13 @@
   "scripts": {
     "install": "npm-run-all install:*",
     "install:normalize.css-makescss": "cp ./node_modules/normalize.css/normalize.css ./node_modules/normalize.css/normalize.scss",
-    "install:font-awesome-copy": "cp -r ./node_modules/font-awesome/fonts ./source/",
-    "install:typeface-mplus-1p-copy": "cp -r ./node_modules/typeface-mplus-1p/fonts ./source/",
-    "install:typeface-mplus-1p-fixpath": "sed -e 's/fonts\\//\\\\.\\\\.\\/fonts\\//g' ./node_modules/typeface-mplus-1p/index.min.css > ./node_modules/typeface-mplus-1p/index.min.temp",
-    "install:typeface-mplus-1p-makescss": "cp ./node_modules/typeface-mplus-1p/index.min.temp ./node_modules/typeface-mplus-1p/index.min.scss"
+    "install:font-awesome-copy": "cp -r ./node_modules/font-awesome/fonts ./source/"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "font-awesome": "^4.7.0",
     "normalize.css": "^7.0.0",
-    "npm-run-all": "^4.1.2",
-    "typeface-mplus-1p": "^0.1.63"
+    "npm-run-all": "^4.1.2"
   }
 }

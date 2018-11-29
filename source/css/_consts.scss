@@ -31,7 +31,7 @@ $sp_breakpoint: 768px;
 }
 
 @mixin main_font($font_weight: 300) {
-  font-family: "mplus-1p", "Yu Gothic", "游ゴシック", "游ゴシック体", "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", "メイリオ" , Meiryo, sans-serif;
+  font-family: "Yu Gothic", "游ゴシック", "游ゴシック体", "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", "メイリオ" , Meiryo, sans-serif;
   font-weight: $font_weight;
 }
 

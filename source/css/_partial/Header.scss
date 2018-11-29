@@ -9,7 +9,7 @@
   padding: $grid * 2;
   color: $main_lighten_text;
   text-shadow: $main_text_shadow;
-  @include main_font(400);
+  @include main_font(500);
 
   *{
     overflow: visible;
@@ -34,7 +34,7 @@
   &__main{
     margin: 0;
     font-size: calc(2rem + 2vw);
-    @include main_font(500);
+    @include main_font(700);
   }
 
   &__date{
