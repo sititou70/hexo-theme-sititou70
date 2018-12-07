@@ -25,7 +25,7 @@ h4,
 h5,
 h6{
   margin: $grid * 2 0 $grid / 4 0;
-  padding: $grid / 4 0;
+  padding: $grid / 4 $grid;
   border-bottom: $main_border;
   line-height: 1.25;
 }
@@ -50,6 +50,7 @@ h5 + h6{
 //contents
 p{
   margin: $grid 0 0 0;
+  padding: 0 $grid;
 }
 
 h2 + p,
@@ -102,8 +103,8 @@ a{
 
 img{
   display: block;
-  margin: $grid auto 0;
-  max-width: 100%;
+  margin: $grid -1 * $grid 0;
+  max-width: calc(100% + #{$grid} * 2);
 }
 
 table{
