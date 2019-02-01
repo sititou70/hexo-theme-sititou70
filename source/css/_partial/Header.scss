@@ -38,8 +38,17 @@
     @include main_font(700);
   }
 
+  &__date,
+  &__updated{
+    padding: 0;
+  }
+
   &__date{
     font-size: calc(1.5rem);
+  }
+
+  &__updated{
+    font-size: calc(1rem);
   }
 }
 
