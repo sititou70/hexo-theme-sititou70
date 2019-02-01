@@ -4,14 +4,14 @@ export default ({page, config}) => {
   const sub_header = page.__index ? <span className="header__sub">{config.subtitle}</span> : <a href="/" className="header__sub">{config.title}</a>;
   const main_header_text = page.__index ? config.title : page.title;
   const date_header =
-    page.date !== null
+    page.date !== undefined
       ?
         <p className="header__date">
           {page.date.format("YYYY/MM/DD")}
         </p>
       : null;
   const updated_header =
-    page.updated !== null
+    page.updated !== undefined
       ?
         <p className="header__updated">
           {page.updated.format("YYYY/MM/DD")}更新
