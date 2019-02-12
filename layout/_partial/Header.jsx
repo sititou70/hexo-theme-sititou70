@@ -12,6 +12,7 @@ export default ({page, config}) => {
       : null;
   const updated_header =
     page.updated !== undefined
+    && !page.updated.isSame(page.date, "day")
       ?
         <p className="header__updated">
           {page.updated.format("YYYY/MM/DD")}更新
