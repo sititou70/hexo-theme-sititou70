@@ -6,8 +6,8 @@ export default ({page, site, theme, paginator}) => {
   return (
     <div className="post">
       <article dangerouslySetInnerHTML={{__html: page.content}} />
-      <LatestArticles site={site} theme={theme} />
       <Disqus />
+      <LatestArticles site={site} theme={theme} />
     </div>
   );
 }
