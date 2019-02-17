@@ -1,8 +1,10 @@
-$more_button_height: 50px;
+$more_button_height: $grid * 2;
 .post_list_wrapper{
+  margin-top: $grid;
+
   .post_list{
     padding-left: 0;
-    margin: 20px 0 0;
+    margin: $grid 0 0;
     list-style: none;
     font-size: 0.9rem;
     overflow: hidden;

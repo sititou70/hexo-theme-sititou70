@@ -7,6 +7,15 @@
   transition: $main_transition;
 }
 
+$h2_font_size: 2rem;
+$h6_font_size: 1rem;
+@for $i from 2 through 6 {
+  h#{$i} {
+    font-size: ($h2_font_size - $h6_font_size) / 4 * (6 - $i) + $h6_font_size;
+    font-weight: 300;
+  }
+}
+
 select,
 input,
 pre,
@@ -17,58 +26,17 @@ kbd{
   @include propgramming_font();
 }
 
-
-//header
-h2,
-h3,
-h4,
-h5,
-h6{
-  margin: $grid * 2 0 $grid / 4 0;
-  padding: $grid / 4 $grid;
-  border-bottom: $main_border;
-  line-height: 1.25;
-}
-
-$h2_font_size: 2rem;
-$h6_font_size: 1rem;
-@for $i from 2 through 6 {
-  h#{$i} {
-    font-size: ($h2_font_size - $h6_font_size) / 4 * (6 - $i) + $h6_font_size;
-    font-weight: 300;
+a{
+  color: $main_key_text;
+  overflow: hidden;
+  text-decoration: underline;
+  text-decoration-color: rgba($key_color, 0.3);
+  @include sp(){
+    font-size: 1.2rem;
   }
-}
-
-h2 + h3,
-h3 + h4,
-h4 + h5,
-h5 + h6{
-  margin-top: 0;
-}
-
-
-//contents
-p{
-  margin: $grid 0 0 0;
-  padding: 0 $grid;
-}
-
-h2 + p,
-h3 + p,
-h4 + p,
-h5 + p,
-h6 + p{
-  margin-top: 0;
-}
-
-em{
-  font-weight: 400;
-  font-style: italic;
-}
-
-b,
-strong{
-  font-weight: 700;
+  &:hover{
+    text-decoration: none;
+  }
 }
 
 button,
@@ -88,88 +56,129 @@ button,
   }
 }
 
-a{
-  color: $main_key_text;
-  overflow: hidden;
-  text-decoration: underline;
-  text-decoration-color: rgba($key_color, 0.3);
-  @include sp(){
-    font-size: 1.2rem;
-  }
-  &:hover{
-    text-decoration: none;
-  }
-}
 
-img{
-  display: block;
-  margin: $grid -1 * $grid 0;
-  max-width: calc(100% + #{$grid} * 2);
-}
+//contents
+article{
+  $article_padding: $grid / 2;
 
-table{
-  width: 100%;
-  margin: $grid 0 0;
-  border-collapse: collapse;
-
-  th, td{
-    padding: $grid / 4;
+  //header
+  h2,
+  h3,
+  h4,
+  h5,
+  h6{
+    margin: $grid * 2 0 0 0;
+    padding: $article_padding;
+    max-width: calc(100% + #{$grid / 2});
+    border-bottom: $main_border;
+    line-height: 1.25;
   }
 
-  thead{
-    tr{
-      font-weight: 700;
-      border-bottom: solid 2px lighten($main_darken_text, 70%);
+  h2 + h3,
+  h3 + h4,
+  h4 + h5,
+  h5 + h6{
+    margin-top: 0;
+  }
+
+  //other
+  p{
+    margin: $grid 0 0 0;
+    padding: 0 $article_padding;
+  }
+
+  em{
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  b,
+  strong{
+    font-weight: 700;
+  }
+
+  img,
+  iframe{
+    position: relative;
+    left: calc(50% + #{$article_padding});
+    display: block;
+    margin: 0 -1 * $article_padding;
+    max-width: calc(100% + #{$article_padding * 2});
+    transform: translateX(-50%);
+    @include sp(){
+      left: calc(50% + #{$article_padding + $grid});
+      margin: 0 -1 * ($article_padding + $grid);
+      max-width: calc(100% + #{$article_padding + $grid} * 2);
     }
   }
-  
-  tbody{
-    tr{
-      border-bottom: solid 1px lighten($main_darken_text, 70%);
-    }
+
+  iframe{
+    margin-top: $grid;
   }
-}
-
-blockquote{
-  margin: 0 0 0 $grid;
-  padding: 0 0 0 $grid;
-  border-left: $main_border;
-}
-
-code{
-  display: inline-block;
-  margin: 0 $grid / 4;
-  padding: 0 $grid / 4;
-  background: $main_lighten_bg_active;
-  border-radius: $main_border_radius;
-}
-
-.highlight{
-  margin: $grid 0 0;
-  color: $main_lighten_text;
-  background: $main_darken_bg;
-  overflow: auto;
-  @include propgramming_font();
 
   table{
-    width: auto;
-    margin: $grid / 2;
+    width: 100%;
+    margin: $grid 0 0;
+    border-collapse: collapse;
 
-    tr{
-      border-bottom: none;
+    th, td{
+      padding: $grid / 4;
+    }
 
-      td{
-        &:first-child{
-          color: darken($main_lighten_text, 50%);
-          text-align: right;
-        }
+    thead{
+      tr{
+        font-weight: 700;
+        border-bottom: solid 2px lighten($main_darken_text, 70%);
+      }
+    }
 
-        pre{
-          margin: 0;
-          line-height: 1.2;
+    tbody{
+      tr{
+        border-bottom: solid 1px lighten($main_darken_text, 70%);
+      }
+    }
+  }
+
+  blockquote{
+    margin: 0 0 0 $grid;
+    padding: 0 0 0 $grid;
+    border-left: $main_border;
+  }
+
+  code{
+    display: inline-block;
+    margin: 0 $grid / 4;
+    padding: 0 $grid / 4;
+    background: $main_lighten_bg_active;
+    border-radius: $main_border_radius;
+  }
+
+  .highlight{
+    margin: $grid 0 0;
+    color: $main_lighten_text;
+    background: $main_darken_bg;
+    overflow: auto;
+    @include propgramming_font();
+
+    table{
+      width: auto;
+      margin: $grid / 2;
+
+      tr{
+        border-bottom: none;
+
+        td{
+          &:first-child{
+            color: darken($main_lighten_text, 50%);
+            text-align: right;
+          }
+
+          pre{
+            margin: 0;
+            line-height: 1.2;
+          }
         }
       }
     }
   }
 }
-
