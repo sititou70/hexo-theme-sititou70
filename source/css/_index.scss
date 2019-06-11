@@ -18,12 +18,24 @@
     .space,
     .extend{
       @extend .button;
+      flex-grow: 1;
+      margin: $grid / 8;
+      padding-left: 0;
+      padding-right: 0;
     }
 
     .page-number,
     .space{
       @include sp(){
         display: none;
+      }
+    }
+
+    .prev,
+    .next{
+      @include sp(){
+        flex-grow: 0;
+        width: 33%;
       }
     }
 

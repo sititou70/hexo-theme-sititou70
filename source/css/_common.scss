@@ -27,6 +27,7 @@ kbd{
 }
 
 a{
+  display: inline-block;
   color: $main_key_text;
   overflow: hidden;
   text-decoration: underline;
