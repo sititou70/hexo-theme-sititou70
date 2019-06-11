@@ -32,6 +32,7 @@ a{
   overflow: hidden;
   text-decoration: underline;
   text-decoration-color: rgba($key_color, 0.3);
+  vertical-align: bottom;
   @include sp(){
     font-size: 1.2rem;
   }
