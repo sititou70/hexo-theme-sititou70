@@ -100,8 +100,7 @@ article{
     font-weight: 700;
   }
 
-  img,
-  iframe{
+  img{
     position: relative;
     left: calc(50% + #{$article_padding});
     display: block;
@@ -116,7 +115,7 @@ article{
   }
 
   iframe{
-    margin-top: $grid;
+    margin: $grid auto;
   }
 
   table{
