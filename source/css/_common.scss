@@ -13,6 +13,7 @@ $h6_font_size: 1rem;
   h#{$i} {
     font-size: ($h2_font_size - $h6_font_size) / 4 * (6 - $i) + $h6_font_size;
     font-weight: 300;
+    line-height: 1.25;
   }
 }
 
@@ -74,7 +75,6 @@ article{
     padding: $article_padding;
     max-width: calc(100% + #{$grid / 2});
     border-bottom: $main_border;
-    line-height: 1.25;
   }
 
   h2 + h3,

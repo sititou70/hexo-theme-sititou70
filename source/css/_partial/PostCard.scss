@@ -1,12 +1,12 @@
 .post_card{
-  @extend button;
+  @extend .button;
   position: relative;
   display: block;
   margin: $grid auto;
   padding: 0 $grid $grid $grid;
   text-decoration: none;
   box-shadow: $main_paper_shadow;
-  border-radius: $main_border_radius;
+  overflow: hidden;
   &:first-child{
     margin-top: 0;
   }
@@ -33,7 +33,8 @@
       max-height: 30vh;
       margin: 0;
       object-fit: cover;
-      transform: scale(1.1);
+      vertical-align: bottom;
+      transform: scale(1.05);
     }
   }
 
@@ -44,6 +45,7 @@
 
   span{
     display: inline-block;
+    width: 100%;
     margin-top: $grid;
     font-size: 0.9rem;
   }
