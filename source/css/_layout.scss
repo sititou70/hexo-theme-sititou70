@@ -46,6 +46,7 @@ html{
       border-radius: $main_border_radius $main_border_radius 0 0;
       @include sp(){
         flex-direction: column;
+        border-radius: 0;
       }
 
       main{
